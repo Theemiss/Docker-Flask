@@ -1,0 +1,10 @@
+version: '3.8'
+
+services:
+  api:
+    build: ./api/
+    command: python app.py run -h 0.0.0.0
+    volumes:
+      - ./api/:/usr/src/app/
+    ports:
+      - 80:5000
